@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="Microsoft YaHei UI"] ;
+edge [fontname="Microsoft YaHei UI"] ;
+0 [label="proline <= 755.0\ngini = 0.652\nsamples = 124\nvalue = [46, 49, 29]\nclass = malic_acid", fillcolor="#f7fefa"] ;
+1 [label="flavanoids <= 1.235\ngini = 0.459\nsamples = 73\nvalue = [0, 47, 26]\nclass = malic_acid", fillcolor="#a7f3c7"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="malic_acid <= 1.17\ngini = 0.142\nsamples = 26\nvalue = [0, 2, 24]\nclass = ash", fillcolor="#8c49e7"] ;
+1 -> 2 ;
+3 [label="gini = 0.0\nsamples = 2\nvalue = [0, 2, 0]\nclass = malic_acid", fillcolor="#39e581"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 24\nvalue = [0, 0, 24]\nclass = ash", fillcolor="#8139e5"] ;
+2 -> 4 ;
+5 [label="od280/od315_of_diluted_wines <= 1.53\ngini = 0.081\nsamples = 47\nvalue = [0, 45, 2]\nclass = malic_acid", fillcolor="#42e687"] ;
+1 -> 5 ;
+6 [label="gini = 0.0\nsamples = 2\nvalue = [0, 0, 2]\nclass = ash", fillcolor="#8139e5"] ;
+5 -> 6 ;
+7 [label="gini = 0.0\nsamples = 45\nvalue = [0, 45, 0]\nclass = malic_acid", fillcolor="#39e581"] ;
+5 -> 7 ;
+8 [label="flavanoids <= 2.3\ngini = 0.181\nsamples = 51\nvalue = [46, 2, 3]\nclass = alcohol", fillcolor="#e88e4e"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="proline <= 896.0\ngini = 0.375\nsamples = 4\nvalue = [0, 1, 3]\nclass = ash", fillcolor="#ab7bee"] ;
+8 -> 9 ;
+10 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 3]\nclass = ash", fillcolor="#8139e5"] ;
+9 -> 10 ;
+11 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]\nclass = malic_acid", fillcolor="#39e581"] ;
+9 -> 11 ;
+12 [label="magnesium <= 135.5\ngini = 0.042\nsamples = 47\nvalue = [46, 1, 0]\nclass = alcohol", fillcolor="#e6843d"] ;
+8 -> 12 ;
+13 [label="gini = 0.0\nsamples = 46\nvalue = [46, 0, 0]\nclass = alcohol", fillcolor="#e58139"] ;
+12 -> 13 ;
+14 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]\nclass = malic_acid", fillcolor="#39e581"] ;
+12 -> 14 ;
+}
