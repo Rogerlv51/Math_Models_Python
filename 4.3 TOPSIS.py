@@ -9,7 +9,7 @@ import pandas as pd
 
 #TOPSIS方法函数
 def Topsis(A1):
-    W0=[0.2,0.3,0.4,0.1] #权重矩阵
+    W0=[0.2,0.3,0.4,0.1] #权重矩阵，这个权重矩阵可以根据4.2的熵权法去算而不是简单的主观赋值（这里就是自己直接设了个权值）
     W=np.ones([A1.shape[1],A1.shape[1]],float)
     for i in range(len(W)):
         for j in range(len(W)):
