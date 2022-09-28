@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def schaffer(p):
+def schaffer(p):     # 自己定义的一个目标函数，用遗传算法去求最优解
     '''
     This function has plenty of local minimum, with strong shocks
     global minimum at (0,0) with value 0
@@ -13,7 +13,7 @@ def schaffer(p):
 from sko.GA import GA
 
 ga = GA(func=schaffer, n_dim=2, size_pop=50, max_iter=800, prob_mut=0.001, lb=[-1, -1], ub=[1, 1], precision=1e-7)
-best_x, best_y = ga.run()
+best_x, best_y = ga.run()     # 求函数极值
 print('best_x:', best_x, '\n', 'best_y:', best_y)
 
 import pandas as pd
@@ -42,7 +42,7 @@ def cal_total_distance(routine):
     num_points, = routine.shape
     return sum([distance_matrix[routine[i % num_points], routine[(i + 1) % num_points]] for i in range(num_points)])
 
-from sko.GA import GA_TSP
+from sko.GA import GA_TSP     # 求路径规划问题
 
 ga_tsp = GA_TSP(func=cal_total_distance, n_dim=num_points, size_pop=50, max_iter=500, prob_mut=1)
 best_points, best_distance = ga_tsp.run()
