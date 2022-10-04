@@ -105,9 +105,9 @@ class GrayForecast():
             plt.legend([self.datacolumn])
         plt.show()
 
-f = open("电影票房.csv", encoding="utf8")
+f = open("Bitcoin.csv", encoding="utf8")
 df = pd.read_csv(f)
-gf = GrayForecast(df, '票房')
+gf = GrayForecast(df, 'Bitcoin')
 gf.forecast(10)
 print(gf.log())
 gf.plot()
